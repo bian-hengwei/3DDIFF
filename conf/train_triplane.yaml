@@ -1,0 +1,11 @@
+defaults:
+  - dataset: shapenet-16-128
+  - trainer: train
+  - ae: shapenet-128
+  - _self_
+
+mode: dense
+exp: ae
+
+dataset:
+  batch_size: 4

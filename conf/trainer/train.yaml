@@ -1,0 +1,7 @@
+accelerator: gpu
+devices: 8
+max_epochs: 50
+precision: 16-mixed
+log_every_n_steps: 10
+debug: False
+debug_length: -1

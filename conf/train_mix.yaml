@@ -1,0 +1,11 @@
+defaults:
+  - dataset: shapenet-16-128
+  - trainer: train
+  - vae: shapenet-16-128
+  - _self_
+
+mode: mix
+exp: x3_mix
+
+dataset:
+  batch_size: 32

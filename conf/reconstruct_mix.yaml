@@ -1,0 +1,12 @@
+defaults:
+  - dataset: shapenet-16-128
+  - vae: shapenet-16-128
+  - _self_
+
+mode: mix
+exp: x3_mix
+output_path: visualization/${exp}/
+vis_count: 16
+
+dataset:
+  batch_size: 2

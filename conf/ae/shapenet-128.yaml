@@ -1,0 +1,17 @@
+encoder_channels: 16
+block_hidden_channels: 64
+mlp_hidden_channels: 256
+mlp_hidden_layers: 4
+lr: 1e-4
+lr_scheduler_steps: [30, 40]
+lr_scheduler_decay: 0.5
+grid_size: [128, 128, 128]
+params:
+  encoder_channels: ${ae.encoder_channels}
+  block_hidden_channels: ${ae.block_hidden_channels}
+  mlp_hidden_channels: ${ae.mlp_hidden_channels}
+  mlp_hidden_layers: ${ae.mlp_hidden_layers}
+  lr: ${ae.lr}
+  lr_scheduler_steps: ${ae.lr_scheduler_steps}
+  lr_scheduler_decay: ${ae.lr_scheduler_decay}
+  grid_size: ${ae.grid_size}

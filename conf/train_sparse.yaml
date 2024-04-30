@@ -1,0 +1,11 @@
+defaults:
+  - dataset: shapenet-128-512
+  - trainer: train
+  - vae: shapenet-128-512
+  - _self_
+
+mode: sparse
+exp: x3_sparse
+
+dataset:
+  batch_size: 2

@@ -1,0 +1,13 @@
+# shapenet 16 - 128
+python train_vae.py -cn train_mix exp=mix trainer.devices=8  # training
+python train_vae.py -cn train_mix trainer=debug  # debug
+
+# shapenet 128 - 256
+python train_vae.py -cn train_sparse exp=sparse trainer.devices=8  # training
+python train_vae.py -cn train_sparse trainer=debug  # debug
+
+python save_triplane.py exp=ae-v1 dataset.batch_size=1
+
+python train_diffusion.py --triplane_loss_type l2 --save_path out/triplane --resume_checkpoint out/triplane/ema_0.9999_004000.pt
+
+python generate_diffusion.py --diff_step 033000

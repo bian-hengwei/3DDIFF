@@ -1,0 +1,12 @@
+defaults:
+  - dataset: shapenet-128-512
+  - vae: shapenet-128-512
+  - _self_
+
+mode: sparse
+exp: x3_dense
+output_path: visualization/${exp}/
+vis_count: 16
+
+dataset:
+  batch_size: 2
